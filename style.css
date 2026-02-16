@@ -3,23 +3,58 @@ body {
     background-color: Ivory;
     color: DarkBlue;
     font-family: 'Open Sans', sans-serif;
-    /* Margins: top/bottom 10px, left/right 50px */
     margin: 10px 50px;
+    line-height: 1.4; /* Improves readability to match image */
 }
 
 /* Heading Styles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
 }
 
-/* Logo Alignment */
+/* Navigation Bar */
+#toc h2 {
+    display: none;
+}
+
+#toc ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distributes links evenly across the page */
+    max-width: 800px; /* Keeps links from spreading too far on wide screens */
+}
+
+#toc a {
+    text-decoration: underline; /* Matches the blue link style in image */
+    color: blue;
+}
+
+/* Column Layout */
+.browser-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Adjusts space between columns */
+    align-items: flex-start;
+}
+
+.browser-column {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+/* Logo Wrapping Logic */
 img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 15px; /* Adds a little breathing room between logo and title */
+    float: left; /* Makes text wrap around the image */
+    margin-right: 15px;
+    margin-bottom: 5px;
 }
 
-/* Optional: Ensures the section header and logo sit nicely together */
-section h2 {
-    display: block;
+/* Clears floats so columns don't collapse */
+.browser-column::after {
+    content: "";
+    display: table;
+    clear: both;
 }
