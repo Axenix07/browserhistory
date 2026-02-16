@@ -1,0 +1,25 @@
+/* General Body Styles */
+body {
+    background-color: Ivory;
+    color: DarkBlue;
+    font-family: 'Open Sans', sans-serif;
+    /* Margins: top/bottom 10px, left/right 50px */
+    margin: 10px 50px;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Logo Alignment */
+img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px; /* Adds a little breathing room between logo and title */
+}
+
+/* Optional: Ensures the section header and logo sit nicely together */
+section h2 {
+    display: block;
+}
